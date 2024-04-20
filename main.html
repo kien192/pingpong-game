@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>2D Ping Pong Game</title>
+</head>
+
+<body>
+<!--Màn hình chờ vào game.-->
+<div id="startScreen">
+    <img src="data/pingpong.png" alt="logo-game-pingpong" id="logo">
+    <div id="startForm">
+        <input class="input" placeholder="Tên của bạn" required="" type="text" id="playerName">
+        <span class="input-border"></span>
+    </div>
+    <div id="button">
+        <button id="manual" class="button-ex">Hướng dẫn</button>
+        <button id="startButton">Chơi</button>
+        <button id="introduction" class="button-ex">Về tác giả</button>
+    </div>
+
+    <div id="reportManual" class="report">
+        <span id="close1" class="close">
+          <i class="far fa-window-close"></i>
+        </span>
+        <h3 style="color: #EAEAEA">Hướng dẫn trò chơi </h3>
+        <div class="content">
+
+            <div class="content-sub">
+                <i class="fas fa-heart"></i>
+                <p class="fas">Có 3 mạng khi bắt đầu trò chơi.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-right"></i>
+                <p class="fas">Di chuyển thanh chắn đỡ bóng.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-pause"></i>
+                <p class="fas">Nhấn phím "Esc" để tạm dừng.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-times"></i>
+                <p class="fas">Không cho bóng rơi xuống đáy.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-check"></i>
+                <p class="fas">Ăn hết gạch và giành chiến thắng!</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="reportIntro" class="report">
+        <span id="close2" class="close">
+        <i class="far fa-window-close"></i>
+        </span>
+        <h2 style="color: #EAEAEA">Thông tin tác giả</h2>
+        <div class="content">
+
+            <div class="content-sub">
+                <i class="fas fa-user"></i>
+                <p class="fas">Nguyễn Trung Kiên - 21130408.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-map-pin"></i>
+                <p class="fas">Năm 3 - ĐH Nông Lâm TP.HCM.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-map-pin"></i>
+                <p class="fas">Lập trình FrontEnd thứ 3 ca 1.</p>
+            </div>
+            <div class="content-sub">
+                <i class="fas fa-map-pin"></i>
+                <p class="fas">GVHD: Th.S Phan Đình Long.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Lớp nền đục -->
+<div id="overlay" class="overlay"></div>
+
+
+
+
+<!--Màn hình chơi game chính.-->
+<div id="playScreen">
+    <canvas id="canvas" width="475px" height="600px"></canvas>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

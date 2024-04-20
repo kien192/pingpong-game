@@ -1,0 +1,198 @@
+body {
+    background: rgba(0, 0, 0, 0.5) url("data/bg_screen.jpg");
+    background-size: cover;
+
+
+    /*background-color: #252A34;*/
+    font-family: monospace sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startScreen {
+    justify-content: center;
+    width: 800px;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 40px;
+    align-items: center;
+}
+
+#logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 5px #000;
+    margin-bottom: 40px;
+}
+
+/*Xử lý phần form nhap ten*/
+
+
+#startForm {
+    position: relative;
+    width: 400px;
+
+}
+
+.input {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    padding : 0.7em 0.5em;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-bottom: 1px solid #EAEAEA ;
+
+}
+
+.input-border {
+    position: absolute;
+    background-color: #FF2E63;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+
+}
+
+input:hover {
+     filter: brightness(50);
+}
+
+input:focus {
+
+    outline: none;
+}
+
+.input:focus ~ .input-border {
+    width: 100%;
+
+}
+
+/*Xử lý button*/
+button {
+    font-size: 30px;
+    margin-top: 40px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    padding: 20px 40px;
+    border: 0;
+    background-color: #FF2E63;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: #C92E46FF 0px 7px 0px 0px;
+}
+
+button:hover {
+    box-shadow: #C92E46FF 0px 5px 0px 0px;
+}
+
+button:active {
+    background-color: #FF2E63;
+    box-shadow: #C92E46FF 0px 3px 0px 0px;
+    transform: translateY(3px);
+    transition: 200ms;
+
+}
+/* Huowngs dan su dung & gioi thieu ban than*/
+.button-ex {
+    font-size: 13px;
+    padding: 10px 10px;
+    background-color: #08D9D6;
+    box-shadow: #14b4b1 0px 5px 0px 0px;
+
+}
+
+.button-ex:hover{
+    box-shadow: #14b4b1 0px 3px 0px 0px;
+}
+
+#manual:active, #introduction:active{
+    background-color: #08D9D6;
+    box-shadow: #14b4b1 0px 3px 0px 0px;
+    transform: translateY(3px);
+    transition: 200ms;
+}
+
+.report {
+    display: none;
+    position: absolute;
+    width: 40vh;
+    background-color: #08D9D6;
+    font-size: 15px;
+    border: 2px solid #EAEAEA ;
+    border-radius: 5px;
+    color: #252A34;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.report .close {
+
+    position: absolute;
+    font-size: 30px;
+    padding-right: 4px;
+    right: 0px;
+    top: 0%;
+}
+
+.report .close:hover {
+    color: #FF2E63;
+}
+
+.content-sub {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+
+}
+.content-sub .fas {
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền đục */
+    z-index: 999; /* Lớp z-index cao hơn các phần tử khác */
+}
+
+/* Màn hình khi chơi*/
+#playScreen {
+    display: none;
+    width: 500px;
+    height: 600px;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
